@@ -1,7 +1,7 @@
 n = int(input())
 chk = 0
-l = [n]
-for i in range(2, 11):
+l = []
+for i in range(1, 11):
     x = n*i
     l.append(x)
     if x % 5 == 0:
