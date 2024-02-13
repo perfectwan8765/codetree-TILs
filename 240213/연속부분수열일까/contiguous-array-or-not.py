@@ -7,7 +7,6 @@ for i, n in enumerate(a) :
         print('No')
         break
     if n == b[0] :
-        print(n)
         chk = 0
         for j, x in enumerate(b) :
             if x != a[i+j]:
