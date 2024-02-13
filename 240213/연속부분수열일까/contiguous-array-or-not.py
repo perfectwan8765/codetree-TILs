@@ -15,3 +15,6 @@ for i, n in enumerate(a) :
         if chk == 0 :
             print('Yes')
             break
+    if i == n1-n2:
+        print('No')
+        break
