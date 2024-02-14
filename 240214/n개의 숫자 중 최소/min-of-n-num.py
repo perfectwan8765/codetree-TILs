@@ -2,12 +2,12 @@ N = int(input())
 arr = list(map(int, input().split()))
 
 chk = arr[0]
+cnt = 1
 for n in arr[1:]:
-    chk = min(n, chk)
+    if n < chk :
+        chk = n
+        cnt = 1
+    elif n == chk :
+        cnt += 1
 
-result = 0
-for n in arr :
-    if n == chk:
-        result += 1
-
-print(chk, result)
+print(chk, cnt)
