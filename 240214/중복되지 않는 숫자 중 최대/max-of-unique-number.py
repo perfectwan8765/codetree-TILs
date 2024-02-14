@@ -9,5 +9,8 @@ for a in arr :
 
 if 1 not in chk :
     print(-1)
-else:
-    print(chk.index(1)+1)
+
+for i in range(1000, 0, -1):
+    if chk[i] == 1:
+        print(i)
+        break
