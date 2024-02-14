@@ -1,17 +1,13 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-m = arr[0]
-cnt = 1
+m = 0
+chk = [0]*1001
 
-for a in arr[1:]:
-    if a > m :
-        m = a
-        cnt = 1
-    elif a == m :
-        cnt += 1
+for a in arr :
+    chk[a] += 1
 
-if cnt == 1:
-    print(m)
-else:
+if 1 not in chk :
     print(-1)
+else:
+    print(chk.index(1)+1)
