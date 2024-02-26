@@ -19,3 +19,4 @@ for d in dirs:
     if x == 0 and y == 0 :
         print(result)
         break
+print(-1)
