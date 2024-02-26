@@ -6,6 +6,7 @@ dy = [0, 1, 0, -1]
 x, y = 0, 0
 i = 0
 result = 0
+isExists = False
 for d in dirs: 
     result += 1
     if d == 'F':
@@ -18,5 +19,7 @@ for d in dirs:
         
     if x == 0 and y == 0 :
         print(result)
+        isExists = True
         break
-print(-1)
+if not isExists :
+    print(-1)
