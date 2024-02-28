@@ -29,7 +29,9 @@ else :
 
 result = 0
 while(True):
-    result += 1
+    if x < 0 or y < 0 or x >= n or y >= n :
+        break
+    
     mirror = arr[x][y]
     if mirror == '/':
         i = i ^ 1
@@ -39,6 +41,6 @@ while(True):
     x += dx[i]
     y += dy[i]
 
-    if x < 0 or y < 0 or x >= n or y >= n :
-        break
+    result += 1
+    
 print(result)
