@@ -7,43 +7,34 @@ arr = [
 
 start = int(input())
 
-dx = [0, 1, 0, -1]
-dy = [1, 0, -1, 0]
+dx = [1, 0, -1, 0]
+dy = [0, -1, 0, 1]
 
-x, y = 0, 0
-i = 0
-chk = 0
-for _ in range(start-1):
-    x += dx[i]
-    y += dy[i]
+if start <= n :
+    i = 0
+    x = 0
+    y = start-1
+elif start <= n*2 :
+    i = 1
+    x = start-n-1
+    y = n-1
+elif start <= n*3 :
+    i = 2
+    x = n-1
+    y = n - (num - 2*n)
+else :
+    i = 3
+    x = n - (num - 3*n)
+    y = 0
 
-    chk += 1
-    if chk == n :
-        i += 1
-i = (i+1)%4
 result = 0
-
 while(True):
     result += 1
     mirror = arr[x][y]
     if mirror == '/':
-        if i == 0 :
-            i = 3
-        if i == 2 :
-            i = 1
-        if i == 3 :
-            i = 0
-        if i == 1 :
-            i = 2
+        i = i ^ 1
     else :
-        if i == 1 :
-            i = 0
-        if i == 0 :
-            i = 1
-        if i == 2 :
-            i = 3
-        if i == 3 :
-            i = 2
+        i = 3 - i
 
     x += dx[i]
     y += dy[i]
