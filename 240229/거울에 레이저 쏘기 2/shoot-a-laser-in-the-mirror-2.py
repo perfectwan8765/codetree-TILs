@@ -21,10 +21,10 @@ elif start <= n*2 :
 elif start <= n*3 :
     i = 2
     x = n-1
-    y = n - (num - 2*n)
+    y = n - (start - 2*n)
 else :
     i = 3
-    x = n - (num - 3*n)
+    x = n - (start - 3*n)
     y = 0
 
 result = 0
