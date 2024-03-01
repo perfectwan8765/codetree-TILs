@@ -10,11 +10,11 @@ dy = [1, 0, -1, 0]
 
 x, y = 0, 0
 d = 0
-c = 64
+c = 65
 arr[x][y] = 'A'
 
 for i in range(2, n*m+1):
-    ch = c + (i+26)%26
+    ch = c + (i+25)%26
     ix = x + dx[d]
     iy = y + dy[d]
 
